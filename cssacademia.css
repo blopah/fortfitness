@@ -1,0 +1,152 @@
+@font-face {
+    src: url("LemonMilk.otf");
+    font-family: LemonMilk;
+}
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    font-family: LemonMilk;
+    background-image: url(imagens/bg.jpg);
+}
+
+#navegacao {
+    position: fixed;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    z-index: 50;
+}
+
+#navegacao div {
+    /* margin: 0; */
+    /* position: relative; */
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+
+.spacer {
+    height: 40px;
+}
+
+#logo {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    margin: 0 auto;    
+    display: flex;
+    flex-direction: row;
+}
+
+.box_a, .box_b, .box_c, .box_d{
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;    
+    background-size: cover;
+    background-position: top center;
+    justify-content: center;
+    /*background-size: 100%;*/
+    align-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    transition: all 0.7s ease ;
+    box-sizing: border-box;
+    padding: 0 15px;
+    
+}
+
+.box_a{
+    background-image: url(imagens/crossfit.png);
+    
+}
+.box_b{
+    background-image: url(imagens/danca.png);
+    
+}
+.box_c{
+    background-image: url(imagens/musculacao.png);
+}
+.box_d{
+    background-image: url(imagens/pilates.png);
+    
+}
+
+
+.box_a:hover{
+    cursor: pointer;  
+    background-color: gold;
+    background-blend-mode: multiply;     
+}
+
+.box_b:hover{
+    cursor: pointer;  
+    background-color: blue;
+    background-blend-mode: multiply;     
+}
+
+.box_c:hover{
+    cursor: pointer;  
+    background-color: coral;
+    background-blend-mode: multiply;     
+}
+
+.box_d:hover{
+    cursor: pointer;  
+    background-color: darkgreen;
+    background-blend-mode: multiply;     
+}
+
+
+span{
+    color: gold ;
+    font-family: LemonMilk;
+    font-size: 250%;
+    line-height: 0.9;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1300px) {
+    
+span{
+    color: gold ;
+    font-family: LemonMilk;
+    font-size: 1.8em
+}
+   
+    }
+
+@media screen and (max-width: 640px) {
+    
+    main{
+    flex-direction: column;
+}
+    
+    .box_d{
+    background-position: center;
+}
+    
+    .box_a, .box_b, .box_c, .box_d{
+    width: 100%;
+   height: 50vh;      
+}
+    span{
+    font-size: 2.2em
+}
+    
+}
+   
