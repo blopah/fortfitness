@@ -11,12 +11,18 @@ html, body {
     background-image: url(imagens/bg.jpg);
 }
 
+a:visited, a:link {
+    color: white;
+    text-decoration: none;
+}
+
 #navegacao {
     position: fixed;
     vertical-align: middle;
     text-align: center;
     width: 100%;
     z-index: 50;
+    min-width: 510px;
 }
 
 #navegacao div {
@@ -26,17 +32,23 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    height: 40px;
-    background-color: black;
+    width: 20%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
 }
 
 .spacer {
-    height: 40px;
+    height: 100px;
+}
+
+.spacerplayer {
+    height: 60px;
 }
 
 #logo {
+    position: fixed;
+    top: 40px;
     margin: 0;
     width: 100%;
     display: flex;
@@ -50,6 +62,8 @@ main{
     flex-direction: row;
 }
 
+/* Used in home */
+
 .box_a, .box_b, .box_c, .box_d{
     width: 25%;
     height: 100vh;
@@ -58,13 +72,13 @@ main{
     background-size: cover;
     background-position: top center;
     justify-content: center;
-    /*background-size: 100%;*/
     align-content: center;
     align-items: center;
     background-repeat: no-repeat;
     transition: all 0.7s ease ;
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 0px;
+    margin: 0px;
     
 }
 
@@ -83,7 +97,6 @@ main{
     background-image: url(imagens/pilates.png);
     
 }
-
 
 .box_a:hover{
     cursor: pointer;  
@@ -109,8 +122,38 @@ main{
     background-blend-mode: multiply;     
 }
 
+/* Used in musicas */
 
-span{
+.box_ma, .box_mb, .box_mc {
+    width: 33%;
+    display: flex;
+    /* flex-wrap: wrap;     */
+    justify-content: center;
+    /*background-size: 100%;*/
+    /* align-content: center; */
+    /* align-items: center; */
+    background-repeat: no-repeat;
+    transition: all 0.7s ease ;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.box_ma audio, .box_mb audio, .box_mc audio {
+    top: 110px;
+    position: fixed;
+    justify-content: center;
+    width: 30%;
+}
+
+#letter {
+    color: white;
+    text-align: center;
+}
+
+
+figcaption{
     color: gold ;
     font-family: LemonMilk;
     font-size: 250%;
@@ -120,33 +163,155 @@ span{
     padding: 0;
 }
 
-@media screen and (max-width: 1300px) {
-    
-span{
-    color: gold ;
-    font-family: LemonMilk;
-    font-size: 1.8em
-}
-   
-    }
+/* Used in aulas */
 
-@media screen and (max-width: 640px) {
+.box_aa, .box_ba, .box_ca, .box_da{
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;    
+    background-size: cover;
+    background-position: top center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    transition: all 0.7s ease ;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
     
-    main{
+}
+
+.box_aa{
+    background-image: url(imagens/crossfit.png);
+    cursor: pointer;  
+    background-color: gold;
+    background-blend-mode: multiply;    
+}
+.box_ba{
+    background-image: url(imagens/danca.png);
+    cursor: pointer;  
+    background-color: blue;
+    background-blend-mode: multiply;
+    
+}
+.box_ca{
+    background-image: url(imagens/musculacao.png);
+    cursor: pointer;  
+    background-color: coral;
+    background-blend-mode: multiply;
+}
+.box_da{
+    background-image: url(imagens/pilates.png);
+    cursor: pointer;  
+    background-color: darkgreen;
+    background-blend-mode: multiply;
+    
+}
+
+.box_a:hover{
+    cursor: pointer;  
+    background-color: gold;
+    background-blend-mode: multiply;     
+}
+
+.box_b:hover{
+    cursor: pointer;  
+    background-color: blue;
+    background-blend-mode: multiply;     
+}
+
+.box_c:hover{
+    cursor: pointer;  
+    background-color: coral;
+    background-blend-mode: multiply;     
+}
+
+.box_d:hover{
+    cursor: pointer;  
+    background-color: darkgreen;
+    background-blend-mode: multiply;     
+}
+
+/* Used in contatos */
+
+#main {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+form {
+    color: white;
+    width: 100vmax;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 10px;
+    min-width: 950px;
 }
-    
-    .box_d{
-    background-position: center;
+
+fieldset {
+    border-radius: 10px;
+    width: 50%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: table;
 }
-    
-    .box_a, .box_b, .box_c, .box_d{
-    width: 100%;
-   height: 50vh;      
+
+input, label, legend {
+    border-radius: 5px;
+    text-align: center;
+    /* width: 60%; */
 }
-    span{
-    font-size: 2.2em
+
+.tr {
+    /* background-color: teal; */
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    /* width: 100%; */
 }
-    
+
+.tr .td1 {
+    align-content: right;
+    text-align: right;
+    width: 50%;
 }
-   
+
+.tr .td2 {
+    color: white;
+    align-content: left;
+    text-align: left;
+    width: 160%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: blue; */
+}
+
+#osradios {
+    /* background-color: grey; */
+    width: 160%;
+}
+
+#radios {
+    width: 10px;
+    margin-left: 15%;
+}
+
+.submit {
+    margin-top: 10px;
+    width: 52.5%;
+    background-color: black;
+    color: white;
+    font-family: LemonMilk;
+}
+
+#mensagem {
+    height: 100px;
+    /* color: white; */
+}

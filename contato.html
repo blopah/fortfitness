@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cssacademia.css" />
+    <title>Home</title>
+</head>
+<body>
+
+    <nav id='navegacao'>
+        <div>
+            <a href='index.html'>Home</a>
+        </div>
+        <div>
+            <a href='musicas.html'>Músicas para esportes</a>
+        </div>
+        <div>
+            <a href='index.html'>
+                <img src='imagens\logonew.png' width="100px">
+            </a>
+        </div>
+        <div>
+            <a href='aulas.html'>Aulas</a>
+        </div>
+        <div>
+            <a href='contato.html'>Contato</a>
+        </div>
+    </nav>
+
+    <div class="spacer"></div>
+    
+    <main id='main'>
+        <form name='dados' method="post" >
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <div class="tr">
+                    <label class='td1' for='fname'>Nome: </label>
+                    <input class='td2' type='text' name='fname' placeholder='Nome' maxlength='100' autofocus="autofocus" required="required"><br/>
+                </div>
+                <div class="tr">
+                    <label class='td1' for='lname'>Sobrenome: </label>
+                    <input class='td2' type='text' name='lname' placeholder='Sobrenome' maxlength='100' required="required"><br/>
+                </div>
+                <div class="tr">
+                    <label class='td1' for='sexo'>Sexo: </label>
+                    <div id='osradios'>
+                        <input class='td2' id='radios' type='radio' name='sexo'>Feminino</input>
+                        <input class='td2' id='radios' type='radio' name='sexo'>Masculino</input>
+                    </div>
+                </div>
+                <div class="tr">
+                    <label class='td1' for='arquivo'>foto: </label>
+                    <input class='td2' name="arquivo" type="file" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contato</legend>
+                <div class="tr">
+                    <label class='td1' for='telefone' type='tel'>Celular: </label>
+                    <input class='td2' type='tel' name='telefone' placeholder='Celular' pattern="([0-9]{2})[0-9]"><br/>
+                </div>
+                <div class="tr">
+                    <label class='td1' for='homepage'>Url: </label>
+                    <input class='td2' type="url" name="homepage" placeholder="www.SeuSite.com"/><br/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Cadastro</legend>
+                <div class="tr">
+                    <label class='td1' for='usermail'>E-mail: </label>
+                    <input class='td2' type="email" name="usermail" placeholder='exemplo@mail.com' required="required"/><br/>
+                </div>
+                <div class="tr">
+                    <label class='td1' for='password'>Senha: </label>
+                    <input class='td2' type='password' name='senha' placeholder='senha'><br/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Mensagem</legend>
+                <div class="tr">
+                    <label class='td1' for='usermail'>Assunto</label>
+                    <input class='td2' type="email" name="usermail" placeholder='exemplo@mail.com' required="required"/><br/>
+                </div>
+                <div class="tr">
+                    <label class='td1' for='mensagem'>Mensagem</label>
+                    <input class='td2' id='mensagem' type='text-area' name='mensagem' placeholder='Insira sua mensagem'><br/>
+                </div>
+            </fieldset>
+                <input class='submit' type="submit">
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
